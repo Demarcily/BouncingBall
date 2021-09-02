@@ -1,4 +1,4 @@
-public class BouncingBall {
+public class BouncingBallTesting {
   public static void main(String [] args) {
     double height = 1000;
     double currentheight;
