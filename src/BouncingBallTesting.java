@@ -1,22 +1,18 @@
 public class BouncingBallTesting {
   public static void main(String [] args) {
-    double height = 1000;
-    double currentheight;
-    double distance = 0;
-    int t = 0;
-    double velocity = 0;
-    double newvelocity;
-    double gravity = 9.82;
+    double a = 9.82;
+    double v1;
+    double v0 = 0;
+    int time = 0;
 
 
 
-    while(t < 14) {
-      newvelocity = velocity + (gravity * t);
-      currentheight = height - newvelocity;
-      velocity = newvelocity;
-      t++;
-      System.out.println(currentheight);
+
+    while (time > 14) {
+      v1 = v0 + (a*time);
+      
     }
+
   }
 
   private void Update() {
