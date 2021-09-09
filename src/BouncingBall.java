@@ -12,24 +12,28 @@ public class BouncingBall {
   }
 
   public BouncingBall() {
-    UpdateVelocity(14);
+    Running(14);
   }
 
-  private void UpdateVelocity (int set) {
-    while (t < set) {
+  private void UpdateVelocity () {
       t = t + dt;
       newvelocity = velocity + (gravity * dt);
       velocity = newvelocity;
       height = height - newvelocity;
       System.out.println(height);
+
+  }
+
+  private void Running(double GameLengthInSeconds) {
+    while (t < GameLengthInSeconds) {
+      UpdateVelocity();
+      if (height < 0) {
+        velocity = 0-velocity;
+      }
     }
   }
 
-  private void Update() {
-
-  }
-
-  private void posUpdate() {
+  private void positionUpdate() {
 
   }
 
