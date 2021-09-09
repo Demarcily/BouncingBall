@@ -1,21 +1,27 @@
 public class BouncingBall {
+  double velocity = 0;
+  double newvelocity = 0;
+  double gravity = 9.82;
+  double dt = 1;
+  double t = 0;
+  double height = 1000;
+
+
   public static void main(String [] args) {
-    double height = 1000;
-    double currentheight;
-    double distance = 0;
-    int t = 0;
-    double velocity = 0;
-    double newvelocity;
-    double gravity = 9.82;
+    new BouncingBall();
+  }
 
+  public BouncingBall() {
+    UpdateVelocity(14);
+  }
 
-
-    while(t < 14) {
-      newvelocity = velocity + (gravity * t);
-      currentheight = height - newvelocity;
+  private void UpdateVelocity (int set) {
+    while (t < set) {
+      t = t + dt;
+      newvelocity = velocity + (gravity * dt);
       velocity = newvelocity;
-      t++;
-      System.out.println(currentheight);
+      height = height - newvelocity;
+      System.out.println(height);
     }
   }
 
